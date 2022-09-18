@@ -1,11 +1,16 @@
+.header {
+    background-image: url('images/1.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
 @media (max-width: 575.98px) {
     .description {
-        left: 0;
-        padding: 0 15px;
-        position: absolute;
-        top: 10%;
-        transform: none;
-        text-align: center;
+        left: 50%;
+	    position: absolute;
+	    top: 45%;
+	    transform: translate(-50%, -55%);
+	    text-align: center;
     }
  
     .description h1 {
@@ -13,7 +18,9 @@
     }
  
     .description p {
-        font-size: 1.2rem;
+        color: #fff;
+	    font-size: 1.3rem;
+	    line-height: 1.5;
     }
  
     .features {
@@ -35,23 +42,29 @@
 	transform: translate(-50%, -55%);
 	text-align: center;
 }
-.description {
-	left: 50%;
-	position: absolute;
-	top: 45%;
-	transform: translate(-50%, -55%);
-	text-align: center;
-}
 .description h1 {
-	color: #b44646;
+	color: #bea7ff;
 }
 .description p {
-	color: rgb(255, 77, 77);
+	color: #fff;
 	font-size: 1.3rem;
 	line-height: 1.5;
+    
+}
+.caption p {
+	color: #fff;
+	font-size: 1.3rem;
+	line-height: 1.5;
+    top: 45%;
+}
+.caption h1 {
+	color: #fff;
+	font-size: 3rem;
+	line-height: 1.5;
+    top: 45%;
 }
 .description button {
-    border:1px solid #b44646;
+    border:1px solid #6ab446;
     background:#b44646;
     border-radius: 0;
     color:rgb(255, 103, 103);
