@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "start": "kill -9 $(lsof -ti:3000,3001) && node website.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "render-ejs": "^1.1.0"
+  }
+}
