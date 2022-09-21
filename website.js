@@ -3,7 +3,7 @@ var app = express();
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 
-//view ejs files
+//use ejs as the engine to view our page files
 app.set('view engine', 'ejs');
 
 
@@ -12,15 +12,12 @@ app.get('/', function(req, res) {
   res.render('index');
 });
 
-app.addEventListener("submit", addTwoNums);
+//get adding page
+app.get('/adding.ejs', function(req, res) {
+  res.render('adding');
+});
 
-function addTwoNums(){
-    fetch("/add", {
-        method: "POST"
-    })
-}
-  
 //server
-app.listen(3000,function(){
-  console.log("Server running at Port 3000");
+app.listen(8000,function(){
+  console.log("Server running at Port 8000");
 });
