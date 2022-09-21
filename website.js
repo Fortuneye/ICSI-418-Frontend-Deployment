@@ -17,6 +17,14 @@ app.get('/adding.ejs', function(req, res) {
   res.render('adding');
 });
 
+app.post("/add", (req, res) => {
+  const num1 = req.body.num1;
+  const num2 = req.body.num2;
+  res.send({
+    result: parseInt(num1) + parseInt(num2)
+  });
+});
+
 //server
 app.listen(8000,function(){
   console.log("Server running at Port 8000");

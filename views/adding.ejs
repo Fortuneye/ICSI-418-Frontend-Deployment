@@ -3,7 +3,7 @@
     <body>
         <%- include('navbar.ejs'); %>
             <h3>Add Two Numbers!</h3>
-            <form method = "post" action="/add">
+            <form method = "post" action="adding.ejs/add">
                 <label>FIRST NUMBER:</label>
                 <input id="number1" type="number" />
                 <label>SECOND NUMBER:</label>
@@ -35,7 +35,7 @@
                     })
                         .then(res => res.json())
                         .then(data => {
-                            document.write(number1 + number2);
+                            document.write(parseInt(number1) + parseInt(number2));
                         })
                         .catch(err => console.log(err));
                 }
