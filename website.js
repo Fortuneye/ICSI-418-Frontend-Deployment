@@ -8,20 +8,21 @@ app.set('view engine', 'ejs');
 
 
 // get the main page file
-app.get('/', function(req, res) {
-  res.render('index');
+app.get('/', function(request, response) {
+  response.render('index');
 });
 
 //get adding page
-app.get('/adding.ejs', function(req, res) {
-  res.render('adding');
+app.get('/adding.ejs', function(request, response) {
+  response.render('adding');
 });
 
-app.post("/add", (req, res) => {
-  const num1 = req.body.num1;
-  const num2 = req.body.num2;
-  res.send({
-    result: parseInt(num1) + parseInt(num2)
+app.post("/add", (request, response) => {
+  const num1 = request.body.num1;
+  const num2 = request.body.num2;
+  const result = arseInt(num1) + parseInt(num2);
+  response.send({
+    result: result
   });
 });
 

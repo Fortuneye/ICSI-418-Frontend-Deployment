@@ -23,7 +23,8 @@
                     event.preventDefault();
                     const number1 = document.querySelector("#number1").value;
                     const number2 = document.querySelector("#number2").value;
-                    resultOfAdd = fetch("/add", {
+                    const result = parseInt(number1) + parseInt(number2);
+                    gettingAdd = fetch("/add", {
                         method: "POST",
                         headers: {
                             'Content-Type': 'applications/json'
@@ -31,10 +32,11 @@
                         body: JSON.stringify({
                             number1: parseInt(number1),
                             number2: parseInt(number2),
+                            result: parseInt(result)
                         })
                     })
-                        .then(res => {
-                            document.write(parseInt(number1) + parseInt(number2));
+                        .then(response => {
+                            document.write(result);
                         })
                         .catch(err => console.log(err));
                 }
