@@ -3,7 +3,7 @@
     <body>
         <%- include('navbar.ejs'); %>
             <h3>Add Two Numbers!</h3>
-            <form method = "post" action="adding.ejs/add">
+            <form method="post" action="adding.ejs/add">
                 <label>FIRST NUMBER:</label>
                 <input id="number1" type="number" />
                 <label>SECOND NUMBER:</label>
@@ -17,27 +17,40 @@
                 crossorigin="anonymous">
             <link rel="stylesheet" type="text/css" href="../main.css">
             <script>
+                //listen for the submit button to be pressed
                 document.body.addEventListener("submit", sendData);
 
+                //function that handles the submit button
                 function sendData(event) {
-                    event.preventDefault();
+                    event.preventDefault(); //prevent website from refreshing
+                    //first number variable
                     const number1 = document.querySelector("#number1").value;
+
+                    //second number variable
                     const number2 = document.querySelector("#number2").value;
+
+                    //result variable
                     const result = parseInt(number1) + parseInt(number2);
+
+                    //fetch will use the post request function from the main website.js file
                     gettingAdd = fetch("/add", {
                         method: "POST",
                         headers: {
+                            //this specifies that we're using json files for the request
                             'Content-Type': 'applications/json'
                         },
+                        //the body of the json will be the integers of all our variables
                         body: JSON.stringify({
                             number1: parseInt(number1),
                             number2: parseInt(number2),
                             result: parseInt(result)
                         })
                     })
+                        //the response variable will send a website consisting of just the resulting number to the user
                         .then(response => {
                             document.write(result);
                         })
+                        //if there's an error, send it to the console
                         .catch(err => console.log(err));
                 }
             </script>
