@@ -7,10 +7,6 @@
 	    text-align: center;
     }
  
-    .description h1 {
-        font-size: 2em;
-    }
- 
     .description p {
         color: #fff;
 	    font-size: 1.3rem;
@@ -21,14 +17,6 @@
         margin: 0;
     }
 }
-.overlay {
-    position: absolute;
-    min-height: 100%;
-    min-width: 100%;
-    left: 0;
-    top: 0;
-    background: rgba(0, 0, 0, 0.6);
-}
 .description {
 	left: 50%;
 	position: absolute;
@@ -36,55 +24,16 @@
 	transform: translate(-50%, -55%);
 	text-align: center;
 }
-.description h1 {
-	color: #bea7ff;
-    font-size: 1rem;
-}
-.description p {
+.description desc {
 	color: #fff;
 	font-size: 1.3rem;
 	line-height: 1.5;
 }
-.caption p {
+.caption desc {
 	color: #fff;
 	font-size: 1.3rem;
 	line-height: 1.5;
     top: 45%;
-}
-.caption h1 {
-	color: #fff;
-	font-size: 3rem;
-	line-height: 1.5;
-    top: 45%;
-}
-.description button {
-    border:1px solid #6ab446;
-    background:#b44646;
-    border-radius: 0;
-    color:rgb(255, 103, 103);
-}
-.description button:hover {
-	border:1px solid rgb(255, 170, 170);
-    background:rgb(252, 140, 140);
-    color:#000;
-}
-.features {
-	margin: 4em auto;
-	padding: 1em;
-	position: relative;
-}
-.feature-title {
-	color: #333;
-	font-size: 1.3rem;
-	font-weight: 700;
-	margin-bottom: 20px;
-	text-transform: uppercase;
-}
-.features img {
-	-webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-	-moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-	margin-bottom: 16px;
 }
 body {
     padding: 0;
@@ -99,7 +48,7 @@ body {
 }
 .nav-link,
 .navbar-brand {
-    color: rgb(255, 67, 67);
+    color: rgb(209, 139, 139);
     cursor: pointer;
 }
 .nav-link {
