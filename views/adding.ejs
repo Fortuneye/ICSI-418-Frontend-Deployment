@@ -30,6 +30,8 @@
 
                 //function that handles the submit button
                 function sendData(event) {
+                    var data = new FormData(); //variable to store data
+
                     event.preventDefault(); //prevent website from refreshing
                     
                     //first number variable
@@ -41,19 +43,21 @@
                     //result variable, use parseint to get actual numerical value
                     const result = parseInt(number1) + parseInt(number2);
 
+                    //append all data to the data variable
+                    data.append("number1", number1);
+                    data.append("number1", number2);
+                    data.append("result", result);
+
                     //fetch will use the POST request function from the main website.js file
-                    gettingAdd = fetch("/add", {
+                    gettingAdd = fetch("/adding.ejs/add", {
                         method: "POST",
                         headers: {
                             //this specifies that we're using json files for the request
-                            'Content-Type': 'applications/json'
+                            'Content-Type': 'applications/json',
+                            'Accept': 'application/json'
                         },
-                        //the body of the json will be the integers of all our variables
-                        body: JSON.stringify({
-                            number1: parseInt(number1),
-                            number2: parseInt(number2),
-                            result: parseInt(result)
-                        })
+                        //the body of the json will be all our data
+                        body: data
                     })
                         //the response variable will send a website consisting of just the resulting number to the user
                         .then(response => {

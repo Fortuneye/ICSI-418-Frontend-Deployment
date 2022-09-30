@@ -18,14 +18,12 @@ app.get('/adding.ejs', function(request, response) {
 });
 
 //post request for adding two numbers
-app.post("/add", (request, response) => {
+app.post("/adding.ejs/add", (request, response) => {
   const num1 = request.body.num1; //first number
   const num2 = request.body.num2; //second number
-  const result = parseInt(num1) + parseInt(num2); //add the two and set them to result
   response.send({ //send all to response
     num1: num1,
     num2: num2,
-    result: result
   });
 });
 
