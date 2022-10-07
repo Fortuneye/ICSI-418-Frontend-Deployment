@@ -1,0 +1,43 @@
+.description {
+	left: 50%;
+	position: absolute;
+	top: 45%;
+	transform: translate(-50%, -55%);
+	text-align: center;
+}
+.description desc {
+	color: #fff;
+	font-size: 1.3rem;
+	line-height: 1.5;
+}
+.caption desc {
+	color: #fff;
+	font-size: 1.3rem;
+	line-height: 1.5;
+    top: 45%;
+}
+body {
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    flex: auto;
+    background: #f6e9e9;
+}
+.navbar {
+    background:#6ab446;
+}
+.nav-link,
+.navbar-brand {
+    color: rgb(139, 79, 79);
+    cursor: pointer;
+}
+.nav-link {
+    margin-right: 1em !important;
+}
+.nav-link:hover {
+    color: #000;
+}
+.navbar-collapse {
+    justify-content: flex-end;
+}
