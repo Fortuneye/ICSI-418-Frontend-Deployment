@@ -6,28 +6,12 @@ app.use(bodyParser.json()); //use json body parser for the express object
 //use ejs as the engine to view our page files
 app.set('view engine', 'ejs');
 
-
 // get the main page file
 app.get('/', function(request, response) {
   response.render('index'); //render the page and send it to response
 });
 
-//get adding page
-app.get('/adding.ejs', function(request, response) {
-  response.render('adding'); //render the page and send it to response
-});
-
-//post request for adding two numbers
-app.post("/adding.ejs/add", (request, response) => {
-  const num1 = request.body.num1; //first number
-  const num2 = request.body.num2; //second number
-  response.send({ //send all to response
-    num1: num1,
-    num2: num2,
-  });
-});
-
 //server
-app.listen(8000,function(){
+app.listen(8000, function() {
   console.log("Server running at Port 8000");
 });
